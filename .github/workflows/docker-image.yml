@@ -40,7 +40,7 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
       - name: modify the image tag
         run: |
-          echo "manifests" >> $GITHUB_PATH
+          cd manifests
           pwd
           cat nginx.yaml
           pwd
