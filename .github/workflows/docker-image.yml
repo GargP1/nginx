@@ -28,7 +28,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: my-docker-hub-namespace/my-docker-hub-repository
+          images: gargp2/nginx-9000
       - name: Build and push Docker image
         id: push
         uses: docker/build-push-action@v5
