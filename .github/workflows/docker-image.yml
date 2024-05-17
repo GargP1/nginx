@@ -38,3 +38,11 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
+      - name: modify the image tag
+        run: |
+          echo "manifests" >> $GITHUB_PATH
+          pwd
+          cat nginx.yaml
+          pwd
+          sed -i "s+gargp2/nginx-9000.*+gargp2/nginx-9000:$RUN_NUMBER+g" nginx.yaml
+          cat nginx.yaml
