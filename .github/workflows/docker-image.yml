@@ -39,8 +39,8 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
       - name: modify the image tag
+        working-directory: ./manifests
         run: |
-          cd manifests
           pwd
           cat nginx.yaml
           pwd
