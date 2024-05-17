@@ -44,5 +44,5 @@ jobs:
           pwd
           cat nginx.yaml
           pwd
-          sed -i "s+gargp2/nginx-9000.*+gargp2/nginx-9000:$RUN_NUMBER+g" nginx.yaml
+          sed -i "s+gargp2/nginx-9000.*+gargp2/nginx-9000:${{ github.run_number }}+g" nginx.yaml
           cat nginx.yaml
