@@ -46,3 +46,6 @@ jobs:
           pwd
           sed -i "s+gargp2/nginx-9000.*+gargp2/nginx-9000:${{ github.run_number }}+g" nginx.yaml
           cat nginx.yaml
+          git add .
+          git commit -m 'Updated  by Github Actions: Job changemanifest: ${{ github.run_number }}'
+          git push origin main
