@@ -41,6 +41,8 @@ jobs:
       - name: modify the image tag
         working-directory: manifests
         run: |
+          git config user.email github_actions@admin.com
+          git config user.name github_actions
           pwd
           cat nginx.yaml
           pwd
