@@ -18,5 +18,5 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: gargp2/nginx-9000:11
+      - image: gargp2/nginx-9000:21
         name: nginx
